@@ -1,0 +1,35 @@
+ConvertIt — FFmpeg third-party notice
+=====================================
+
+This software uses libraries from the FFmpeg project under the LGPLv2.1.
+
+ConvertIt invokes FFmpeg as a separate command-line process for certain video
+and audio conversions. It does not link FFmpeg libraries into the ConvertIt
+application binary.
+
+Bundled FFmpeg builds are compiled without --enable-gpl and without
+--enable-nonfree. H.264 output uses the h264_videotoolbox encoder (Apple
+VideoToolbox), not GPL libx264.
+
+Corresponding source code
+-------------------------
+The exact FFmpeg source code, build instructions, and any patches used to
+produce the bundled binary are available at:
+
+  https://convertitapp.com/legal/ffmpeg-source
+
+License
+-------
+FFmpeg is licensed under the GNU Lesser General Public License (LGPL) version 2.1:
+  https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+
+FFmpeg project home:
+  https://ffmpeg.org
+
+Additional LGPL libraries that may be included in the bundled FFmpeg build:
+- LAME (MP3 encoding) — https://lame.sourceforge.io/
+- libvorbis — https://xiph.org/vorbis/
+- libopus — https://opus-codec.org/
+- libvpx — https://www.webmproject.org/
+
+Exchange rates in ConvertIt are provided by Frankfurter (https://frankfurter.dev).

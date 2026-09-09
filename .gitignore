@@ -1,0 +1,9 @@
+Convert It/Resources/ffmpeg-build-info.txt
+BundledBinaries/ffmpeg
+ThirdParty/FFmpeg/build/
+ThirdParty/FFmpeg/dist/*.tar.gz
+.DS_Store
+.derivedData/
+build/
+*.xcuserstate
+xcuserdata/

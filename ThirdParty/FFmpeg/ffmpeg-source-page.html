@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FFmpeg Source Code — ConvertIt</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 42rem;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .subtitle { color: #666; margin-top: 0; }
+    @media (prefers-color-scheme: dark) {
+      .subtitle { color: #aaa; }
+    }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem 0.75rem; text-align: left; }
+    th { background: rgba(127,127,127,0.12); }
+    a { color: #0066cc; }
+    .notice {
+      background: rgba(127,127,127,0.1);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+    footer { margin-top: 3rem; font-size: 0.875rem; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>FFmpeg source code</h1>
+  <p class="subtitle">ConvertIt — third-party license compliance</p>
+
+  <div class="notice">
+    <p>
+      This software uses code of
+      <a href="https://ffmpeg.org">FFmpeg</a>
+      licensed under the
+      <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a>
+      and its source can be downloaded below.
+    </p>
+  </div>
+
+  <p>
+    ConvertIt includes a command-line <strong>FFmpeg</strong> binary for certain video and audio
+    conversions. ConvertIt runs FFmpeg as a separate process; it does not link FFmpeg libraries
+    into the application.
+  </p>
+  <p>
+    The bundled FFmpeg build is compiled without <code>--enable-gpl</code> and without
+    <code>--enable-nonfree</code>.
+  </p>
+
+  <h2>Download corresponding source</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="convertit-ffmpeg-7.1-src.tar.gz">convertit-ffmpeg-7.1-src.tar.gz</a></td>
+        <td>FFmpeg n7.1 source, build instructions (<code>COMPILE.txt</code>), and patches (<code>changes.diff</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><small>Update the filename when you ship a new FFmpeg version.</small></p>
+
+  <h2>Build instructions</h2>
+  <p>
+    Extract the archive and read <code>COMPILE.txt</code> for the exact <code>./configure</code>
+    line used to produce the binary bundled in ConvertIt.
+  </p>
+  <p>On macOS, dependencies can be installed with Homebrew:</p>
+  <pre><code>brew install nasm pkg-config lame libvorbis libopus libvpx</code></pre>
+
+  <h2>FFmpeg project</h2>
+  <ul>
+    <li>Project home: <a href="https://ffmpeg.org">ffmpeg.org</a></li>
+    <li>License: <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU LGPL v2.1</a></li>
+  </ul>
+
+  <h2>Other libraries in the bundled FFmpeg build</h2>
+  <table>
+    <thead>
+      <tr><th>Library</th><th>Use</th><th>Project</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>LAME</td><td>MP3 encoding</td><td><a href="https://lame.sourceforge.io/">lame.sourceforge.io</a></td></tr>
+      <tr><td>libvpx</td><td>WebM / VP9</td><td><a href="https://www.webmproject.org/">webmproject.org</a></td></tr>
+      <tr><td>libvorbis</td><td>Ogg Vorbis</td><td><a href="https://xiph.org/vorbis/">xiph.org/vorbis</a></td></tr>
+      <tr><td>libopus</td><td>Opus audio</td><td><a href="https://opus-codec.org/">opus-codec.org</a></td></tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <p><a href="https://convertitapp.com">ConvertIt</a> · <a href="mailto:help@convertitapp.com">help@convertitapp.com</a></p>
+  </footer>
+</body>
+</html>
